@@ -2,19 +2,21 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Hello World!</title>
+    <title>Mindgrub Pastebin Local</title>
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+
+    <!-- http://stackoverflow.com/questions/32621988/electron-jquery-is-not-defined -->
+    <script>window.$ = window.jQuery = require('./bower_components/jquery/dist/jquery.min.js');</script>
     <script src="bower_components/react/react.js"></script>
     <script src="bower_components/react/react-dom.js"></script>
     <script src="bower_components/babel/browser.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/waterwheel.js"></script>
+    
   </head>
   <body>
-    <h1>Hello World!</h1>
-    <!-- All of the Node.js APIs are available in this renderer process. -->
-    We are using node <script>document.write(process.versions.node)</script>,
-    Chromium <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
-
-    <div id="example"></div>
+    <div id="page"></div>
   </body>
 
   <script>
@@ -22,9 +24,11 @@
     require('./renderer.js');
   </script>
   <script type="text/babel">
-    ReactDOM.render(
-      <h1>Hello World from React</h1>,
-      document.getElementById('example')
-    );
+    $(function() {
+      ReactDOM.render(
+        <h1>Hello World from React</h1>,
+        document.getElementById('page')
+      );  
+    });
   </script>
 </html>
