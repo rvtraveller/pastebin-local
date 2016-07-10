@@ -1,0 +1,29 @@
+{
+  "name": "pastebin-local",
+  "description": "A Pastebin application capable of running on the local desktop",
+  "main": "main.js",
+  "authors": [
+    "Brian Thompson"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "Electron",
+    "Pastebin",
+    "Drupal",
+    "8"
+  ],
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "react": "^15.2.1",
+    "babel": "*",
+    "jquery": "^3.1.0"
+  }
+}
